@@ -1,6 +1,6 @@
 # LPIII_2016
 # Autor: HAROLD HERNANDEZ (UNEFA)
-#ver en: https://repl.it/DdBN/8
+#ver en: https://repl.it/DdBN/9
 # CLASE NODO
 
 class Nodo:
@@ -159,6 +159,18 @@ class Lista:
 				suma += nodo.info
 			nodo = nodo.sig				
 		return suma
+		
+		# Metodo para comparar dos listas
+	def comparar (self,comparar):
+		iguales = True
+		nodo_comparar = comparar.__primero
+		nodo = self.__primero
+		for i in range (comparar.__n):
+			if(nodo_comparar.info!=nodo.info):
+				return False
+			nodo=nodo.sig
+			nodo_comparar=nodo_comparar.sig
+		return iguales
 	
 	# Metodo para eliminar el primero de la lista
 	def eliminar_primero(self):
@@ -178,7 +190,7 @@ class Lista:
 
 # Crea la lista de elementos
 l = Lista()
-
+l2 = Lista()
 # Inserta elementos en la lista 
 l.insertar_actual(5);
 l.insertar_actual(10);
@@ -187,6 +199,15 @@ l.insertar_actual(20);
 l.insertar_inicio(25);
 l.insertar_actual(35);
 l.insertar_ultimo(35);
+
+# Inserta elementos en la lista 2
+l2.insertar_actual(5);
+l2.insertar_actual(10);
+l2.insertar_actual(15);
+l2.insertar_actual(20);
+l2.insertar_inicio(25);
+l2.insertar_actual(35);
+l2.insertar_ultimo(35);
 
 # Muestra los elementos de la lista 
 print "Metodo para mostrar los elementos de una lista"
@@ -229,6 +250,13 @@ print " "
 print "Muestra la suma de los enteros"
 print " "
 print l.suma_enteros()
+print " "
+
+# Compara 2 listas
+print "compara 2 listas"
+print " "
+l.comparar(l2)
+print (l.comparar(l2))
 print " "
 
 # Muestra los elementos que se han borrado de la lista
