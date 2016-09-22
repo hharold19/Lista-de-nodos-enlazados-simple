@@ -1,6 +1,6 @@
 # LPIII_2016
 # Autor: HAROLD HERNANDEZ (UNEFA)
-#ver en: https://repl.it/DdBN/9
+#ver: https://repl.it/DdBN/9
 # CLASE NODO
 
 class Nodo:
